@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+	<div style = "color:blue">
+		<form action = "{{url_for('predict')}}" method = "post">
+			<h2> Prediction the Loan Type based on Interest Rates</h2>
+			<h3> Loan Amount Requested</h3>
+			<input id = "first" name = "Loan_Amount_Requested" type = "number">
+			<h3> Length Employed</h3><select name = "Length_Employed" id = "len_emp" required = "required">
+				<option value = "10"><1 year</option>
+				<option value = "0">1 year</option>
+				<option value = "3">2 years</option>
+				<option value = "3">3 years</option>
+				<option value = "4">4 years</option>
+				<option value = "5">5 years</option>
+				<option value = "6">6 years</option>
+				<option value = "7">7 years</option>
+				<option value = "8">8 years</option>
+				<option value = ""9>9 years</option>
+				<option value = "1">10+ years</option>
+			</select>
+			<h3> Home Owner</h3><select name = "Home_Owner" id = "home" required = "required">
+				<option value = "4">Rent</option>
+				<option value = "0">Mortgage</option>
+				<option value = "3">Own</option>
+				<option value = "2">Other</option>
+				<option value = "1">None</option>
+			</select>
+			<h3>Annual Income</h3>
+			<input id = "third" name = "Annual_Income" type = "number">  
+			<h3> Income Verified</h3><select name = "Income_Verified" id = "inc_verified" required = "required">
+				<option value = "0">Verified-income</option>
+				<option value = "2">not verified</option>
+				<option value = "1">Verified-income source</option>
+			</select>
+			<h3> Purpose of Loan</h3><select name = "Purpose_Of_Loan" id = "purchase" required = "required">
+				<option value = "0">car</option>
+				<option value = "1">credit_card</option>
+				<option value = "2">debt_consolidation</option>
+				<option value = "6">major_purpose</option>
+				<option value = "5">house</option>
+				<option value = "4">home_improvement</option>
+				<option value = "3">educational</option>
+				<option value = "7">medical</option>
+				<option value = "8">moving</option>
+				<option value = "9">other</option>
+				<option value = "12">vacation</option>
+				<option value = "13">wedding</option>
+				<option value = "10">renewable_energy</option>
+				<option value = "11">small_business</option>
+			</select>
+			<h3>Debt to Income</h3>
+			<input id = "fourth" name = "Debt_to_Income" type = "number">
+			<h3>Inquiries made in Last 6 Months</h3>
+			<input id = "fifth" name = "Inquiries_Last_6Mo" type = "number">
+			<h3>Months Since Deliquency</h3>
+			<input id = "sixth" name = "Months_Since_Deliquency" type = "number">
+			<h3>Number of open Accounts</h3>
+			<input id = "seventh" name = "Number_Open_Accounts" type = "number">
+			<h3>Total Number of Accounts</h3>
+			<input id = "eighth" name = "Total_Accounts" type = "number">
+			<h3>Gender</h3><select name = "Gender" id = "gen" required = "required">
+				<option value = "1">Male</option>
+				<option value = "0">Female</option>
+			<br><br><br><button id="sub" type="submit ">Predict the Loan type</button>
+			<br>
+			
+			
+		</form>
+		
+		<br><br><h3>{{prediction_text}}<h3>
+	</div>
+	
+	<style>
+		body {
+			background-color: #000000;
+			text-alig: center;
+			padding: 0px;
+		}
+		#research {
+            font-size: 18px;
+            width: 100px;
+            height: 23px;
+            top: 23px;
+        }
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+	</style>
+</body>
+
+</html>
+			
+			
